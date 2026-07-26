@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Personal Profile</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+
+        <div class="header-content">
+
+            <img src="image.jpg" alt="Profile Photo" class="profile-image">
+
+            <h1>Ms.Manisha R</h1>
+
+        </div>
+
+    </header>
+
+    <nav>
+
+        <a href="#academics">Academics</a>
+
+        <a href="#achievements">Achievements</a>
+
+        <a href="#events">Events</a>
+
+        <input type="search" placeholder="Search">
+
+    </nav>
+
+    <section class="skills-video">
+
+        <!-- Skills -->
+
+        <div class="skills">
+
+            <h3>Photoshop</h3>
+
+            <progress value="75" max="100"></progress>
+
+            <h3>Java</h3>
+
+            <progress value="85" max="100"></progress>
+
+            <h3>C++</h3>
+
+            <progress value="80" max="100"></progress>
+
+            <h3>PHP</h3>
+
+            <progress value="60" max="100"></progress>
+
+            <h3>JavaScript</h3>
+
+            <progress value="50" max="100"></progress>
+
+        </div>
+
+        <div class="video">
+
+            <video width="520" controls>
+
+                <source src="video.mp4" type="video/mp4">
+
+                Your browser does not support the video tag.
+
+            </video>
+
+        </div>
+
+    </section>
+
+    <section class="forms">
+
+        <fieldset>
+
+            <legend>Personal Information</legend>
+
+            <form>
+
+                <label>User name:</label>
+
+                <input type="text" placeholder="Enter the user Name" required>
+
+                <br><br>
+
+
+                <label>Password:</label>
+
+                <input type="password" value="Maddie@123" required>
+
+                <br><br>
+
+
+                <label>Reg. No:</label>
+
+                <input type="text" value="UR16CS001" required>
+
+                <br><br>
+
+
+                <label>Age:</label>
+
+                <input type="number" value="19" min="1" max="100">
+
+                <br><br>
+
+
+                <label>Gender:</label>
+
+                <input type="radio" name="gender" value="male">
+
+                <span>Male</span>
+
+                <input type="radio" name="gender" value="female">
+
+                <span>Female</span>
+
+                <br><br>
+
+
+                <label>DOB:</label>
+
+                <input type="date">
+
+                <br><br>
+
+
+                <label>Favourite Color:</label>
+
+                <input type="color">
+
+                <br><br>
+
+
+                <label>Change Profile Photo:</label>
+
+                <input type="file" accept="image/*">
+
+            </form>
+
+        </fieldset>
+
+        <fieldset>
+
+            <legend>Contact Information</legend>
+
+            <form>
+
+                <label>Address:</label>
+
+                <textarea rows="4" cols="40"></textarea>
+
+                <br><br>
+
+
+                <label>State:</label>
+
+                <select>
+
+                    <option>Select</option>
+
+                    <option>Tamil Nadu</option>
+
+                    <option>Kerala</option>
+
+                    <option>Karnataka</option>
+
+                    <option>Andhra Pradesh</option>
+
+                </select>
+
+                <br><br>
+
+
+                <label>Zipcode:</label>
+
+                <input type="text" placeholder="Only 6 numbers" pattern="[0-9]{6}">
+
+                <br><br>
+
+
+                <label>Mobile:</label>
+
+                <input type="tel" placeholder="9876543210">
+
+                <br><br>
+
+
+                <label>Email:</label>
+
+                <input type="email" placeholder="your email">
+
+                <br><br>
+
+
+                <label>URL:</label>
+
+                <input type="url" placeholder="web url">
+
+                <br><br>
+
+
+                <input type="checkbox">
+
+                <span>I verified</span>
+
+                <br><br>
+
+
+                <input type="submit" value="Submit">
+
+            </form>
+
+        </fieldset>
+
+    </section>
+
+    <section class="media-section">
+
+
+        <!-- Audio -->
+
+        <div class="audio-box">
+
+            <h3>Audio</h3>
+
+            <audio controls>
+
+                <source src="audio.mp3" type="audio/mpeg">
+
+                Your browser does not support the audio element.
+
+            </audio>
+
+        </div>
+
+        <div class="pdf-box">
+
+            <h3>Document</h3>
+
+            <iframe src="document.pdf" width="600" height="350">
+
+            </iframe>
+
+        </div>
+
+    </section>
+
+    <section class="map-section">
+
+        <h3>My Location</h3>
+
+        <iframe
+            src="https://www.google.com/maps?q=Karunya+University,+Coimbatore&output=embed"
+            width="100%"
+            height="350"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy">
+        </iframe>
+
+    </section>
+
+    <footer>
+
+        <h3>Your address</h3>
+
+        <p>
+            © 2020-2021. (URK24CS1127) - Web Technology Lab Batch 3.
+            All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
