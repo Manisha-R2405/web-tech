@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dynamic Background Color</title>
+</head>
+<body>
+    <h1>Dynamic Background</h1>
+    <h2>The background color changes automatically.</h2>
+
+    <script>
+        function setBackgroundColor() {
+            let red = Math.floor(Math.random() * 255);
+
+            let green = Math.floor(Math.random() * 255);
+
+            let blue = Math.floor(Math.random() * 255);
+            let color = "rgb(" + red + "," + green + "," + blue + ")";
+            document.getElementsByTagName("body")[0].style.backgroundColor = color;
+        }
+        setInterval(setBackgroundColor, 2000);
+
+    </script>
+</body>
+</html>

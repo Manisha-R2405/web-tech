@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Move and Stop Image</title>
+    <style>
+        #img {
+            width: 200px;
+            height: 120px;
+            object-fit: contain;
+        }
+    </style>
+</head>
+<body onload="init()">
+    <h1>Moving Car</h1>
+    <img src="car.png" id="img">
+    <br><br>
+    <button onclick="moveRight()">Move</button>
+    <button onclick="stop()">Stop</button>
+    <script>
+        let imgObj;
+        let animate;
+        function init() {
+
+            imgObj = document.getElementById("img");
+
+            imgObj.style.position = "relative";
+
+            imgObj.style.left = "0px";
+        }
+        function moveRight() {
+
+            imgObj.style.left =
+                parseInt(imgObj.style.left) + 1 + "px";
+
+            animate = setTimeout(moveRight, 20);
+        }
+        function stop() {
+
+            clearTimeout(animate);
+
+            imgObj.style.left = "0px";
+        }
+    </script>
+</body>
+</html>
