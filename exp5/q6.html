@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Birthday Cake Order Form</title>
+</head>
+<body>
+
+    <h1>Birthday Cake Order Form</h1>
+
+    <label>Enter your name:</label>
+    <input type="text" id="name">
+
+    <br><br>
+    <label>Select Cake Size:</label>
+
+    <br>
+
+    <input type="radio" name="size" value="Small">
+    Small
+
+    <input type="radio" name="size" value="Medium">
+    Medium
+
+    <input type="radio" name="size" value="Large">
+    Large
+
+    <br><br>
+    <label>Select Toppings:</label>
+
+    <br>
+
+    <input type="checkbox" name="topping" value="Chocolate Chips">
+    Chocolate Chips
+
+    <br>
+
+    <input type="checkbox" name="topping" value="Sprinkles">
+    Sprinkles
+
+    <br>
+
+    <input type="checkbox" name="topping" value="Cherries">
+    Cherries
+
+    <br><br>
+
+    <button onclick="orderCake()">Order Cake</button>
+
+    <h2>Order Details</h2>
+
+    <p id="output"></p>
+
+    <script>
+
+        function orderCake() {
+            let customerName =
+                document.getElementById("name").value;
+            let sizes =
+                document.getElementsByName("size");
+
+            let selectedSize = "";
+
+            for (let i = 0; i < sizes.length; i++) {
+
+                if (sizes[i].checked) {
+
+                    selectedSize = sizes[i].value;
+                }
+            }
+            let toppings =
+                document.getElementsByName("topping");
+
+            let selectedToppings = [];
+
+            for (let i = 0; i < toppings.length; i++) {
+
+                if (toppings[i].checked) {
+
+                    selectedToppings.push(
+                        toppings[i].value
+                    );
+                }
+            }
+            document.getElementById("output").innerHTML =
+                "Customer Name: " + customerName +
+                "<br>Cake Size: " + selectedSize +
+                "<br>Toppings: " +
+                selectedToppings.join(", ");
+
+        }
+
+    </script>
+
+</body>
+</html>
