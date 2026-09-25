@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+
+            $("#btn").click(function(){
+
+                let num1 = parseInt($("#t1").val());
+                let num2 = parseInt($("#t2").val());
+
+                let sum = num1 + num2;
+
+                $("#result").val(sum);
+                $("#box").html("Result: " + sum);
+
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+
+    <h2>Addition Calculator</h2>
+
+    Number 1:
+    <input type="text" id="t1">
+    <br><br>
+
+    Number 2:
+    <input type="text" id="t2">
+    <br><br>
+
+    <button id="btn">Addition</button>
+    <br><br>
+
+    Result:
+    <input type="text" id="result" readonly>
+    <br><br>
+
+    <div id="box"
+         style="background-color:blue;color:white;width:300px;padding:10px;">
+    </div>
+
+</body>
+</html>

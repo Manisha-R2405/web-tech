@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>jQuery Effects</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <style>
+
+        #product {
+            width: 300px;
+            padding: 20px;
+            background-color: lightblue;
+            border: 2px solid black;
+            margin-top: 20px;
+        }
+
+        button {
+            margin: 5px;
+            padding: 10px;
+        }
+
+    </style>
+
+    <script>
+
+        $(document).ready(function(){
+
+            $("#show").click(function(){
+                $("#product").show();
+            });
+
+            $("#hide").click(function(){
+                $("#product").hide();
+            });
+
+            $("#fade").click(function(){
+                $("#product").fadeToggle(1000);
+            });
+
+            $("#slide").click(function(){
+                $("#product").slideToggle(1000);
+            });
+
+            $("#animate").click(function(){
+
+                $("#product").animate({
+                    left: "200px",
+                    width: "400px"
+                }, 1000);
+
+            });
+
+            $("#stop").click(function(){
+                $("#product").stop();
+            });
+
+            $("#callback").click(function(){
+
+                $("#product").hide(1000, function(){
+                    alert("Product has been hidden!");
+                });
+
+            });
+
+            $("#chain").click(function(){
+
+                $("#product")
+                    .slideUp(500)
+                    .slideDown(500)
+                    .fadeOut(500)
+                    .fadeIn(500);
+
+            });
+
+            $("#reset").click(function(){
+
+                $("#product").stop(true, true);
+
+                $("#product").css({
+                    position: "relative",
+                    left: "0px",
+                    width: "300px"
+                });
+
+                $("#product").show();
+
+            });
+
+        });
+
+    </script>
+
+</head>
+
+<body>
+
+    <h2>Online Store</h2>
+
+    <button id="show">Show</button>
+
+    <button id="hide">Hide</button>
+
+    <button id="fade">Fade</button>
+
+    <button id="slide">Slide</button>
+
+    <button id="animate">Animate</button>
+
+    <button id="stop">Stop Animation</button>
+
+    <button id="callback">Callback</button>
+
+    <button id="chain">Chaining</button>
+
+    <button id="reset">Reset</button>
+
+    <div id="product">
+
+        <h3>Product Details</h3>
+
+        <p><b>Product:</b> Laptop Pro</p>
+
+        <p><b>Price:</b> ₹65,000</p>
+
+        <p><b>Category:</b> Electronics</p>
+
+        <p><b>In Stock:</b> Yes</p>
+
+        <p>A high performance laptop for work and play.</p>
+
+    </div>
+
+</body>
+</html>

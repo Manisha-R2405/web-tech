@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Cake Order Bill</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+
+            $("#order").click(function(){
+
+                let flavor = $("#flavor").val();
+                let quantity = parseInt($("#quantity").val());
+                let candles = $("#candles").prop("checked");
+                let delivery = $("input[name='delivery']:checked").val();
+
+                let price = 0;
+
+                if(flavor == "Chocolate")
+                {
+                    price = 500;
+                }
+                else if(flavor == "Vanilla")
+                {
+                    price = 400;
+                }
+                else if(flavor == "Red Velvet")
+                {
+                    price = 600;
+                }
+
+                let total = price * quantity;
+
+                if(candles)
+                {
+                    total = total + 50;
+                }
+
+                if(delivery == "Home")
+                {
+                    total = total + 100;
+                }
+
+                $("#bill").text("Rs. " + total);
+
+            });
+
+        });
+    </script>
+
+</head>
+
+<body>
+
+    <h2>Cake Order Bill</h2>
+
+    Flavor:
+
+    <select id="flavor">
+        <option value="Chocolate">Chocolate</option>
+        <option value="Vanilla">Vanilla</option>
+        <option value="Red Velvet">Red Velvet</option>
+    </select>
+
+    <br><br>
+
+    Quantity:
+
+    <input type="number" id="quantity" value="1" min="1">
+
+    <br><br>
+
+    <input type="checkbox" id="candles">
+
+    Add Candles (Rs. 50)
+
+    <br><br>
+
+    Delivery Option:
+
+    <input type="radio" name="delivery" value="Pickup" checked>
+    Pickup
+
+    <input type="radio" name="delivery" value="Home">
+    Home Delivery (Rs. 100)
+
+    <br><br>
+
+    <button id="order">Place Order</button>
+
+    <h3>Bill Amount: <span id="bill">Rs. 0</span></h3>
+
+</body>
+</html>
